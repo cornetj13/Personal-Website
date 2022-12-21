@@ -10,18 +10,276 @@
 }
 
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap'); */
 
 /* Variable Declaration */
-:root {
-  /* --primary-text: #f1f5e9;
-  --secondary-text: #BACBD9;
-  --tertiary-text: #085574;
-  --primary-color: #2C3639;
-  --secondary-color: #3D8361;
-  --tertiary-color: #1C6758;
-  --accent-color: #7fceb1;
-  --border-color: #314E59; */
+@layer components {
+
+  /* Landing Elements */
+
+  .landing-colors {
+    @apply bg-charcoal text-snow;
+  }
+
+  .landing-layout {
+    @apply h-screen;
+  }
+
+  .landing-header {
+    @apply mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl z-10;
+  }
+
+  .landing-tagline {
+    @apply mb-6 font-normal;
+  }
+
+  .landing-my-work-text {
+    @apply text-warm-blue font-bold cursor-pointer hover:text-light-blue;
+  }
+
+  .landing-button-colors {
+    @apply bg-dark-blue hover:bg-warm-blue text-white border-light-blue hover:border-dark-blue;
+  }
+
+  .landing-button-border {
+    @apply rounded-lg border-2;
+  }
+
+  .landing-button-layout {
+    @apply w-48 py-3 px-5 inline-flex text-base font-medium;
+  }
+
+  .landing-button-animation {
+    @apply cursor-pointer transition-all ease-in-out delay-100 hover:translate-y-1 hover:scale-110 duration-300;
+  }
+
+  .landing-button-arrow-layout {
+    @apply ml-2 -mr-1 w-5 h-5;
+  }
+
+  .landing-button-arrow-spin {
+    @apply transition-all ease-in-out duration-500;
+  }
+
+  /* Navbar Elements */
+
+  .navbar-colors {
+    @apply bg-metal text-white;
+  }
+
+  .navbar-layout {
+    @apply py-4 px-2 border-b-4 border-warm-blue;
+  }
+
+  .navbar-text {
+    @apply font-semibold text-lg;
+  }
+
+  .navbar-animation {
+    @apply inline-block cursor-pointer transition-all ease-in-out delay-100 hover:scale-110 hover:text-light-blue duration-300;
+  }
+
+  /* About Page Elements */
+
+  .skills-circle-color {
+    @apply bg-blue-300 ring-white;
+  }
+
+  .skills-circle-layout {
+    @apply flex absolute -left-[33px] justify-center items-center xl:w-16 xl:h-16 rounded-full ring-4;
+  }
+
+  .skills-circle-icon {
+    @apply text-[28px]
+  }
+
+  .skills-layout {
+    @apply mb-20 ml-16;
+  }
+
+  .skills-layout-bottom {
+    @apply mb-10 ml-16;
+  }
+
+  .skills-header {
+    @apply mb-1 ml-2 font-semibold;
+  }
+
+  .skills-text {
+    @apply mb-4 ml-2 text-base font-semibold text-gray-600;
+  }
+
+  .experience-circle-color {
+    @apply bg-blue-300 ring-white;
+  }
+
+  .experience-circle-layout {
+    @apply flex z-10 justify-center items-center xl:w-20 xl:h-20 rounded-full ring-0 sm:ring-8 shrink-0;
+  }
+
+  .experience-circle-icon {
+    @apply text-[40px];
+  }
+
+  .experience-through-line {
+    @apply hidden sm:flex w-full bg-gray-500 h-0.5;
+  }
+
+  .experience-subheader {
+    @apply block my-2 font-normal leading-none text-gray-600;
+  }
+
+  .experience-paragraph {
+    @apply text-base font-normal;
+  }
+
+  /* Portfolio Page Elements */
+
+  .portfolio-button-icon {
+    @apply my-4 w-8 h-8 md:w-12 md:h-12 xl:w-20 xl:h-20 cursor-pointer;
+  }
+
+  .portfolio-button-color {
+    @apply ring-white;
+  }
+
+  .portfolio-button-layout {
+    @apply absolute bottom-[20px] justify-center items-center w-16 h-16 xl:w-16 xl:h-16 rounded-lg ring-2;
+  }
+
+  .portfolio-icons {
+    @apply text-[28px] xl:text-[40px] text-white;
+  }
+
+  /* Contact Page Elements */
+
+  .input-div {
+    @apply col-flex center-all mb-6;
+  }
+
+  .input-forms-colors {
+    @apply bg-gray-50 border-warm-blue focus:ring-blue-500 focus:border-blue-500;
+  }
+
+  .input-forms-layout {
+    @apply border-2 rounded-lg block p-2.5 m-4 w-60;
+  }
+
+  .input-textbox-layout {
+    @apply border-2 rounded-lg block p-2.5 w-full;
+  }
+
+  .contact-button-colors {
+    @apply bg-warm-blue text-white border-blue-600 hover:bg-blue-600 hover:border-light-blue focus:ring-blue-300;
+  }
+
+  .contact-button-border {
+    @apply rounded-lg border-2;
+  }
+
+  .contact-button-layout {
+    @apply m-4 px-5 py-2.5;
+  }
+
+  .contact-resume-icon {
+    @apply text-[40px] mt-2;
+  }
+
+  /* Footer Elements */
+
+  .footer-button-color {
+    @apply ring-white;
+  }
+
+  .footer-button-layout {
+    @apply absolute -top-[72px] justify-center items-center w-16 h-16 xl:w-20 xl:h-20 rounded-lg ring-2;
+  }
+
+  .footer-icons {
+    @apply text-[28px] xl:text-[40px] text-white;
+  }
+
+  /* Util Elements */
+
+  .center-all {
+    @apply justify-center items-center text-center;
+  }
+
+  .center-between {
+    @apply justify-between items-center text-center;
+  }
+
+  .center-around {
+    @apply justify-around items-center text-center;
+  }
+
+  .col-flex {
+    @apply flex flex-col;
+  }
+
+  .row-flex {
+    @apply flex flex-row;
+  }
+  
+  .text-header {
+    @apply mb-12 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl;
+  }
+
+  .text-mark {
+    @apply bg-blue-600 text-white px-4 rounded;
+  }
+
+  .text-tagline-size {
+    @apply text-sm md:text-base lg:text-lg
+  }
+
+  .text-subtagline-size {
+    @apply text-xs md:text-sm lg:text-base;
+  }
+
+  .outer-box-color {
+    @apply bg-lime-700;
+  }
+
+  .outer-box-layout {
+    @apply m-16 p-16;
+  }
+
+  .outer-box-border {
+    @apply rounded-xl;
+  }
+
+  .inner-box-color {
+    @apply bg-lime-400 text-gray-900;
+  }
+
+  .inner-box-second-color {
+    @apply bg-amber-600 text-gray-900;
+  }
+
+  .inner-box-layout {
+    @apply p-10;
+  }
+
+  .inner-box-border {
+    @apply rounded-lg;
+  }
+
 }
 
 /* TEST */
+/* #landing-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+/* #landing-splash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+} */

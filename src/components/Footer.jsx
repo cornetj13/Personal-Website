@@ -1,26 +1,33 @@
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+
 function Footer() {
   return (
-    <footer className="p-4 bg-orange-200 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-      <span className="text-sm text-stone-600 sm:text-center dark:text-gray-400">
-        © 2022 Jonathan Cornet. All Rights Reserved.
-      </span>
-      <ul className="flex flex-wrap items-center mt-3 text-sm text-stone-600 dark:text-gray-400 sm:mt-0">
-        <li>
-          <a href="#" className="mr-4 hover:underline md:mr-6 ">
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <a href="#" className="mr-4 hover:underline md:mr-6">
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="#" className="mr-4 hover:underline md:mr-6">
-            Third Thing?
-          </a>
-        </li>
-      </ul>
+    <footer className="bg-orange-200 p-8">
+      <div className="col-flex center-all w-full gap-2">
+        <ul className="row-flex center-all text-sm gap-8 relative">
+          <li className="bg-linkedin footer-button-color footer-button-layout right-[40px] flex center-all">
+            <a
+              href="https://www.linkedin.com/in/cornetj13/"
+              target="_blank"
+              className="flex center-all"
+            >
+              <FaLinkedin className="footer-icons" />
+            </a>
+          </li>
+          <li className="bg-github footer-button-color footer-button-layout left-[40px] flex center-all">
+            <a
+              href="https://github.com/cornetj13"
+              target="_blank"
+              className="flex center-all"
+            >
+              <FaGithub className="footer-icons" />
+            </a>
+          </li>
+        </ul>
+        <p className="text-sm mt-4 p-2">
+          © 2022 Jonathan Cornet. All Rights Reserved.
+        </p>
+      </div>
     </footer>
   );
 }

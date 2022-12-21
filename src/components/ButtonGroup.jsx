@@ -4,19 +4,19 @@ import {
   FaServer,
   FaTerminal,
 } from 'react-icons/fa';
-import { IoIosBrowsers } from 'react-icons/io';
+import { MdOutlineWeb } from 'react-icons/md';
 
 function ButtonGroup() {
   return (
-    <div className="m-auto shadow-xl p-2 w-full bg-cyan-300">
-      <div className="flex justify-between py-2 px-4 max-w-full">
-        <div className="p-2 text-zinc-900 text-lg">
+    <div className="bg-cyan-300 shadow-xl p-6 rounded-t-xl">
+      <div className="col-flex center-all">
+        <div className="text-tagline-size">
           <p>I want to see: </p>
         </div>
-        <div className="p-4">
+        <div className="w-full">
           <form>
-            <div className="flex">
-              <label htmlFor="front-end" className="cursor-pointer">
+            <div className="row-flex center-around">
+              <div>
                 <input
                   type="radio"
                   name="rating"
@@ -24,10 +24,10 @@ function ButtonGroup() {
                   id="front-end"
                   value="front-end"
                 />
-                <IoIosBrowsers size={70} className="m-8 hover:text-indigo-600" />
-              </label>
+                <MdOutlineWeb className="portfolio-button-icon hover:text-indigo-600" />
+              </div>
 
-              <label htmlFor="back-end" className="cursor-pointer">
+              <div>
                 <input
                   type="radio"
                   name="rating"
@@ -36,10 +36,10 @@ function ButtonGroup() {
                   value="back-end"
                   checked
                 />
-                <FaServer size={70} className="m-8 hover:text-amber-600" />
-              </label>
+                <FaServer className="portfolio-button-icon hover:text-amber-600" />
+              </div>
 
-              <label htmlFor="full-stack" className="cursor-pointer">
+              <div>
                 <input
                   type="radio"
                   name="rating"
@@ -47,10 +47,10 @@ function ButtonGroup() {
                   id="full-stack"
                   value="full-stack"
                 />
-                <FaLayerGroup size={70} className="m-8 hover:text-sky-600" />
-              </label>
+                <FaLayerGroup className="portfolio-button-icon hover:text-sky-600" />
+              </div>
 
-              <label htmlFor="misc-projects" className="cursor-pointer">
+              <div>
                 <input
                   type="radio"
                   name="rating"
@@ -58,10 +58,10 @@ function ButtonGroup() {
                   id="misc-projects"
                   value="misc-projects"
                 />
-                <FaTerminal size={70} className="m-8 hover:text-green-600" />
-              </label>
+                <FaTerminal className="portfolio-button-icon hover:text-green-600" />
+              </div>
 
-              <label htmlFor="all-projects" className="cursor-pointer">
+              <div>
                 <input
                   type="radio"
                   name="rating"
@@ -69,8 +69,8 @@ function ButtonGroup() {
                   id="all-projects"
                   value="all-projects"
                 />
-                <FaBorderAll size={70} className="m-8 hover:text-rose-600" />
-              </label>
+                <FaBorderAll className="portfolio-button-icon hover:text-rose-600" />
+              </div>
             </div>
           </form>
         </div>
