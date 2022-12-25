@@ -13,18 +13,15 @@ function About() {
       <div className="inner-box-color inner-box-layout inner-box-border">
         {/* About Section Title */}
         <h2 className="text-header center-all">
-          <mark className="text-mark">
-            About
-          </mark>{' '}
-          Me
+          <mark className="text-mark">About</mark> Me
         </h2>
 
         <div className="flex">
           <div className="flex-col center-all m-8 w-1/2" id="bio-box">
             {/* Avatar */}
-            <div className='flex justify-center'>
+            <div className="flex justify-center">
               <img
-                className="rounded shadow-xl"
+                className="rounded shadow-xl w-4/5"
                 src={ProfilePicture}
                 alt="Picture of Jonathan Cornet"
               />
@@ -53,68 +50,385 @@ function About() {
               {/* Front-End Skills */}
               <li className="skills-layout pt-4">
                 <span className="skills-circle-color skills-circle-layout">
-                  <IoIosBrowsers className='skills-circle-icon' />
+                  <IoIosBrowsers className="skills-circle-icon" />
                 </span>
-                <h3 className="skills-header text-tagline-size">
-                  Front-End:
-                </h3>
+                <h3 className="skills-header text-tagline-size">Front-End:</h3>
                 <p className="text-subtagline-size skills-text">
-                  HTML | CSS | SASS | JavaScript (ES5/6)
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    HTML
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    CSS
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://sass-lang.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    SASS
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.javascript.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    JavaScript (ES5/6)
+                  </a>
                 </p>
               </li>
 
               {/* Back-End Skills */}
               <li className="skills-layout">
                 <span className="skills-circle-color skills-circle-layout">
-                  <FaServer className='skills-circle-icon' />
+                  <FaServer className="skills-circle-icon" />
                 </span>
-                <h3 className="skills-header text-tagline-size">
-                  Back-End:
-                </h3>
+                <h3 className="skills-header text-tagline-size">Back-End:</h3>
                 <p className="text-subtagline-size skills-text">
-                  SQL | MySQL | MongoDB | GraphQL | Sequelize | JSON
+                  <a
+                    href="https://en.wikipedia.org/wiki/SQL"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    SQL
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.mysql.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    MySQL
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.mongodb.com/home"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    MongoDB
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://graphql.org/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    GraphQL
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://sequelize.org/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    Sequelize
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.json.org/json-en.html"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    JSON
+                  </a>
                 </p>
               </li>
 
               {/* Multi-Purpose Skills */}
               <li className="skills-layout">
                 <span className="skills-circle-color skills-circle-layout">
-                  <FaTerminal className='skills-circle-icon' />
+                  <FaTerminal className="skills-circle-icon" />
                 </span>
                 <h3 className="skills-header text-tagline-size">
                   Multi-Purpose:
                 </h3>
                 <p className="text-subtagline-size skills-text">
-                  Python | FORTRAN | C# | Java | C++ | C | Kotlin | OOP
-                  Methodology
+                  <a
+                    href="https://www.python.org/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    Python
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://fortran-lang.org/en/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    FORTRAN
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://learn.microsoft.com/en-us/dotnet/csharp/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    C#
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.java.com/en/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    Java
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://isocpp.org/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    C++
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://en.wikipedia.org/wiki/C_(programming_language)"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    C
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://kotlinlang.org/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    Kotlin
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://en.wikipedia.org/wiki/Object-oriented_programming"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    OOP Methodology
+                  </a>
                 </p>
               </li>
 
               {/* Frameworks */}
               <li className="skills-layout">
                 <span className="skills-circle-color skills-circle-layout">
-                  <FaLayerGroup className='skills-circle-icon' />
+                  <FaLayerGroup className="skills-circle-icon" />
                 </span>
-                <h3 className="skills-header text-tagline-size">
-                  Frameworks:
-                </h3>
+                <h3 className="skills-header text-tagline-size">Frameworks:</h3>
                 <p className="text-subtagline-size skills-text">
-                  Node | React | Express | NPM | Tailwind | Bootstrap | REST
-                  APIs | jQuery | AJAX | Mongoose | Firebase | AWS
+                  <a
+                    href="https://nodejs.org/en/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    Node JS
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://reactjs.org/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    React JS
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://expressjs.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    Express JS
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.npmjs.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    NPM
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://tailwindcss.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    Tailwind
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://getbootstrap.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    Bootstrap
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.ibm.com/cloud/learn/rest-apis"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    REST APIs
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://jquery.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    jQuery
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    AJAX
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://mongoosejs.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    Mongoose JS
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://firebase.google.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    Firebase
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://aws.amazon.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}
+                    AWS
+                  </a>
                 </p>
               </li>
 
               {/* Misc Skills */}
               <li className="skills-layout-bottom">
                 <span className="skills-circle-color skills-circle-layout">
-                  <MdMiscellaneousServices className='skills-circle-icon' />
+                  <MdMiscellaneousServices className="skills-circle-icon" />
                 </span>
-                <h3 className="skills-header text-tagline-size">
-                  Misc:
-                </h3>
+                <h3 className="skills-header text-tagline-size">Misc:</h3>
                 <p className="text-subtagline-size skills-text">
-                  Unity | Adobe XD | Figma | Aseprite | Agile | MVC | Testing
-                  (Jest) | MERN Stack | PWAs
+                  <a
+                    href="https://unity.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    Unity
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.adobe.com/creativecloud.html"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}Adobe XD
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.figma.com/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}Figma
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://www.aseprite.org/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}Aseprite
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://en.wikipedia.org/wiki/Agile_software_development"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}Agile
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}MVC
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://jestjs.io/"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}Testing (Jest JS)
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://en.wikipedia.org/wiki/MEAN_(solution_stack)"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}MERN Stack
+                  </a>{' '}
+                  |
+                  <a
+                    href="https://en.wikipedia.org/wiki/Progressive_web_app"
+                    target="_blank"
+                    className="link-hover"
+                  >
+                    {' '}PWAs
+                  </a>
                 </p>
               </li>
             </ol>
@@ -128,9 +442,15 @@ function About() {
             <li className="relative mb-6 sm:mb-0 text-center">
               <div className="flex items-center">
                 <div className="experience-through-line"></div>
-                <div className="experience-circle-color experience-circle-layout">
-                  <GiBoots className='experience-circle-icon' />
-                </div>
+                <a
+                  href="https://bootcamp.uw.edu/"
+                  target="_blank"
+                  className="z-10"
+                >
+                  <div className="experience-circle-color experience-circle-layout experience-circle-animation">
+                    <GiBoots className="experience-circle-icon" />
+                  </div>
+                </a>
                 <div className="experience-through-line"></div>
               </div>
               <div className="mt-3 sm:pr-8">
@@ -151,9 +471,11 @@ function About() {
             <li className="relative mb-6 sm:mb-0  text-center">
               <div className="flex items-center">
                 <div className="experience-through-line"></div>
-                <div className="experience-circle-color experience-circle-layout">
-                  <MdSchool className='experience-circle-icon' />
-                </div>
+                <a href="https://www.wwu.edu/" target="_blank" className="z-10">
+                  <div className="experience-circle-color experience-circle-layout experience-circle-animation">
+                    <MdSchool className="experience-circle-icon" />
+                  </div>
+                </a>
                 <div className="experience-through-line"></div>
               </div>
               <div className="mt-3 sm:pr-8">
@@ -174,9 +496,11 @@ function About() {
             <li className="relative mb-6 sm:mb-0  text-center">
               <div className="flex items-center">
                 <div className="experience-through-line"></div>
-                <div className="experience-circle-color experience-circle-layout">
-                  <MdWork className='experience-circle-icon' />
-                </div>
+                <a href="https://cvdyn.com/" target="_blank" className="z-10">
+                  <div className="experience-circle-color experience-circle-layout experience-circle-animation">
+                    <MdWork className="experience-circle-icon" />
+                  </div>
+                </a>
                 <div className="experience-through-line"></div>
               </div>
               <div className="mt-3 sm:pr-8">

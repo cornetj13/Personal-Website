@@ -64,11 +64,19 @@
   /* Navbar Elements */
 
   .navbar-colors {
-    @apply bg-metal text-white;
+    @apply bg-slate-600 text-white;
   }
 
   .navbar-layout {
     @apply py-4 px-2 border-b-4 border-warm-blue;
+  }
+
+  .navbar-placement {
+    @apply relative;
+  }
+
+  .sticky-navbar-placement {
+    @apply fixed top-0 left-0 w-full z-20;
   }
 
   .navbar-text {
@@ -109,16 +117,24 @@
     @apply mb-4 ml-2 text-base font-semibold text-gray-600;
   }
 
+  .link-hover {
+    @apply hover:text-warm-blue;
+  }
+
   .experience-circle-color {
-    @apply bg-blue-300 ring-white;
+    @apply bg-blue-300 hover:bg-blue-500 ring-white;
   }
 
   .experience-circle-layout {
-    @apply flex z-10 justify-center items-center xl:w-20 xl:h-20 rounded-full ring-0 sm:ring-8 shrink-0;
+    @apply flex justify-center items-center xl:w-20 xl:h-20 rounded-full ring-0 sm:ring-8 shrink-0;
   }
 
   .experience-circle-icon {
     @apply text-[40px];
+  }
+
+  .experience-circle-animation {
+    @apply cursor-pointer transition-all ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300;
   }
 
   .experience-through-line {
@@ -134,9 +150,16 @@
   }
 
   /* Portfolio Page Elements */
+  .portfolio-card-layout {
+    @apply absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black rounded-t-xl;
+  }
+
+  .portfolio-card-title {
+    @apply text-center bg-black w-full text-2xl lg:text-3xl xl:text-4xl font-bold text-snow rounded-t-xl p-2;
+  }
 
   .portfolio-button-icon {
-    @apply my-4 w-8 h-8 md:w-12 md:h-12 xl:w-20 xl:h-20 cursor-pointer;
+    @apply my-4 w-6 h-6 md:w-12 md:h-12 xl:w-20 xl:h-20 cursor-pointer;
   }
 
   .portfolio-button-color {
@@ -144,7 +167,7 @@
   }
 
   .portfolio-button-layout {
-    @apply absolute bottom-[20px] justify-center items-center w-16 h-16 xl:w-16 xl:h-16 rounded-lg ring-2;
+    @apply -translate-y-[50%] -translate-x-[50%] justify-center items-center w-10 h-10 xl:w-14 xl:h-14 rounded-lg ring-2;
   }
 
   .portfolio-icons {
@@ -193,6 +216,10 @@
 
   .footer-button-layout {
     @apply absolute -top-[72px] justify-center items-center w-16 h-16 xl:w-20 xl:h-20 rounded-lg ring-2;
+  }
+
+  .footer-button-animation {
+    @apply cursor-pointer transition-all ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300;
   }
 
   .footer-icons {

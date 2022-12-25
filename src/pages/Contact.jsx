@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import { HiDocumentText } from 'react-icons/hi';
 
 function Contact() {
+  const [contactName, setContactName] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [contactMessage, setContactMessage] = useState('');
+
   return (
     <div
       className="outer-box-color outer-box-layout outer-box-border"

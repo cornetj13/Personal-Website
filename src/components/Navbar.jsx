@@ -1,9 +1,24 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
 function Navbar() {
+  const [navbarClass, setNavbarClass] = useState('navbar-placement');
+  
+  useEffect(() => {
+    window.addEventListener('scroll', stickNavbar);
+    return () => window.removeEventListener()
+  }, []);
+
+  const stickNavbar = () => {
+    if(window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > window.innerHeight ? setNavbarClass('sticky-navbar-placement') : setNavbarClass('navbar-placement')
+    }
+  }
+
   return (
     <nav
-      className="navbar-colors"
+      className={`navbar-colors ${navbarClass}`}
       id="navbar"
     >
       <ul className="row-flex center-around navbar-layout">
