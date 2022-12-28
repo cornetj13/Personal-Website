@@ -18,7 +18,7 @@
   /* Landing Elements */
 
   .landing-colors {
-    @apply bg-charcoal text-snow;
+    @apply bg-landing-color text-light-text;
   }
 
   .landing-layout {
@@ -34,11 +34,11 @@
   }
 
   .landing-my-work-text {
-    @apply text-warm-blue font-bold cursor-pointer hover:text-light-blue;
+    @apply text-button-hover font-bold cursor-pointer hover:text-button-light;
   }
 
   .landing-button-colors {
-    @apply bg-dark-blue hover:bg-warm-blue text-white border-light-blue hover:border-dark-blue;
+    @apply bg-button-dark hover:bg-button-hover text-light-text border-button-light hover:border-button-dark;
   }
 
   .landing-button-border {
@@ -64,11 +64,11 @@
   /* Navbar Elements */
 
   .navbar-colors {
-    @apply bg-slate-600 text-white;
+    @apply bg-button-dark text-light-text;
   }
 
   .navbar-layout {
-    @apply py-4 px-2 border-b-4 border-warm-blue;
+    @apply py-4 px-2 border-b-4 border-button-light;
   }
 
   .navbar-placement {
@@ -84,13 +84,17 @@
   }
 
   .navbar-animation {
-    @apply inline-block cursor-pointer transition-all ease-in-out delay-100 hover:scale-110 hover:text-light-blue duration-300;
+    @apply inline-block cursor-pointer transition-all ease-in-out delay-100 hover:scale-110 hover:text-button-light duration-300;
   }
 
   /* About Page Elements */
 
+  .profile-picture-clip {
+    clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  }
+
   .skills-circle-color {
-    @apply bg-blue-300 ring-white;
+    @apply bg-button-light ring-light-text;
   }
 
   .skills-circle-layout {
@@ -114,15 +118,15 @@
   }
 
   .skills-text {
-    @apply mb-4 ml-2 text-base font-semibold text-gray-600;
+    @apply mb-4 ml-2 text-base font-semibold text-button-dark;
   }
 
   .link-hover {
-    @apply hover:text-warm-blue;
+    @apply hover:text-button-hover;
   }
 
   .experience-circle-color {
-    @apply bg-blue-300 hover:bg-blue-500 ring-white;
+    @apply bg-button-light ring-light-text hover:bg-button-dark  hover:text-light-text transition duration-300;
   }
 
   .experience-circle-layout {
@@ -138,7 +142,7 @@
   }
 
   .experience-through-line {
-    @apply hidden sm:flex w-full bg-gray-500 h-0.5;
+    @apply hidden sm:flex w-full bg-landing-color h-0.5;
   }
 
   .experience-subheader {
@@ -151,11 +155,11 @@
 
   /* Portfolio Page Elements */
   .portfolio-card-layout {
-    @apply absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black rounded-t-xl;
+    @apply absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black rounded-xl;
   }
 
   .portfolio-card-title {
-    @apply text-center bg-black w-full text-2xl lg:text-3xl xl:text-4xl font-bold text-snow rounded-t-xl p-2;
+    @apply text-center bg-black w-full text-2xl lg:text-3xl xl:text-4xl font-bold text-light-text rounded-t-xl p-2;
   }
 
   .portfolio-button-icon {
@@ -163,7 +167,7 @@
   }
 
   .portfolio-button-color {
-    @apply ring-white;
+    @apply ring-light-text;
   }
 
   .portfolio-button-layout {
@@ -171,7 +175,7 @@
   }
 
   .portfolio-icons {
-    @apply text-[28px] xl:text-[40px] text-white;
+    @apply text-[28px] xl:text-[40px] text-light-text;
   }
 
   /* Contact Page Elements */
@@ -181,7 +185,7 @@
   }
 
   .input-forms-colors {
-    @apply bg-gray-50 border-warm-blue focus:ring-blue-500 focus:border-blue-500;
+    @apply bg-gray-50 border-button-dark;
   }
 
   .input-forms-layout {
@@ -193,7 +197,7 @@
   }
 
   .contact-button-colors {
-    @apply bg-warm-blue text-white border-blue-600 hover:bg-blue-600 hover:border-light-blue focus:ring-blue-300;
+    @apply bg-button-dark text-light-text border-button-hover hover:bg-button-hover hover:border-button-dark transition-colors duration-300;
   }
 
   .contact-button-border {
@@ -211,7 +215,7 @@
   /* Footer Elements */
 
   .footer-button-color {
-    @apply ring-white;
+    @apply ring-light-text;
   }
 
   .footer-button-layout {
@@ -223,7 +227,7 @@
   }
 
   .footer-icons {
-    @apply text-[28px] xl:text-[40px] text-white;
+    @apply text-[28px] xl:text-[40px] text-light-text;
   }
 
   /* Util Elements */
@@ -253,7 +257,7 @@
   }
 
   .text-mark {
-    @apply bg-blue-600 text-white px-4 rounded;
+    @apply bg-button-dark text-light-text px-4 rounded;
   }
 
   .text-tagline-size {
@@ -265,7 +269,7 @@
   }
 
   .outer-box-color {
-    @apply bg-lime-700;
+    @apply bg-background-color;
   }
 
   .outer-box-layout {
@@ -277,11 +281,11 @@
   }
 
   .inner-box-color {
-    @apply bg-lime-400 text-gray-900;
+    @apply bg-inner-bg text-gray-900;
   }
 
   .inner-box-second-color {
-    @apply bg-amber-600 text-gray-900;
+    @apply bg-button-dark text-gray-900;
   }
 
   .inner-box-layout {

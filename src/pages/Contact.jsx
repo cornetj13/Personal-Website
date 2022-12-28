@@ -1,10 +1,30 @@
-import { useState } from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { HiDocumentText } from 'react-icons/hi';
 
 function Contact() {
-  const [contactName, setContactName] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
-  const [contactMessage, setContactMessage] = useState('');
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <div
@@ -15,59 +35,58 @@ function Contact() {
         <h2 className="text-header center-all">
           Get in <mark className="text-mark">touch</mark> with me!
         </h2>
-        <p className="text-tagline-size my-4">
+        <p className="text-tagline-size mt-2 mb-6">
           I am always looking for projects, collaborations, or just plain old
           networking opportunities!
         </p>
-        <form>
-          <div className='row-flex center-around'>
+        <form ref={formRef} onSubmit={sendEmail}>
+          <div className="row-flex center-around">
             <div className="input-div">
-              <label
-                htmlFor="name-input"
-                className="text-subtagline-size block mb-2"
-              >
+              <label htmlFor="user_name" className="text-subtagline-size block">
                 Your name:
               </label>
               <input
                 type="text"
-                id="name-input"
+                id="user_name"
+                name="user_name"
                 className="input-forms-colors input-forms-layout"
               />
             </div>
             <div className="input-div">
               <label
-                htmlFor="email-input"
-                className="text-subtagline-size block mb-2"
+                htmlFor="user_email"
+                className="text-subtagline-size block"
               >
                 Your email:
               </label>
               <input
-                type="text"
-                id="email-input"
+                type="email"
+                id="user_email"
+                name="user_email"
                 className="input-forms-colors input-forms-layout"
               />
             </div>
           </div>
           <div className="input-div">
             <label
-              htmlFor="message-input"
+              htmlFor="message"
               className="text-subtagline-size block mb-4"
             >
               Write your message here...
             </label>
             <textarea
-              id="message-input"
+              id="message"
+              name="message"
               rows="8"
-              className="input-forms-colors input-textbox-layout"
               placeholder="Write your thoughts here..."
+              className="input-forms-colors input-textbox-layout"
             ></textarea>
           </div>
-          <button
-            type="button"
+          <input
+            type="submit"
+            value="Send Message!"
             className="contact-button-colors contact-button-border contact-button-layout focus:outline-none focus:ring-4 font-medium text-sm text-center"
-          >
-            Send Message!
-          </button>
+          />
         </form>
         <div className="w-full row-flex center-all mt-6">
           <button

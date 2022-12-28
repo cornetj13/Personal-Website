@@ -5,14 +5,14 @@ function Portfolio() {
   return (
     <div className="outer-box-color outer-box-layout outer-box-border" id="portfolio">
       <div className="inner-box-second-color inner-box-layout inner-box-border">
-      <h1 className="text-header center-all">
+      <h1 className="text-header center-all text-light-text">
           My Portfolio
         </h1>
-        <div id="project-control">
+        {/* <div id="project-control">
           <ButtonGroup />
-        </div>
+        </div> */}
 
-        <div className="bg-blue-500" id="projects-display">
+        <div id="projects-display">
           <PortfolioGrid />
         </div>
       </div>
