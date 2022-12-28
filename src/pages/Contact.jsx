@@ -95,7 +95,7 @@ function Contact() {
           >
             <button
               type="button"
-              className="contact-button-colors contact-button-border col-flex contact-button-layout font-medium text-sm text-center items-center"
+              className="center-all contact-button-colors contact-button-border col-flex contact-button-layout font-medium text-sm"
             >
               <HiDocumentText className="contact-resume-icon" />
               <p className="m-4">Download my Resume!</p>

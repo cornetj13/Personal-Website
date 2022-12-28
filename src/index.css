@@ -213,7 +213,7 @@
   }
 
   .contact-button-layout {
-    @apply m-4 px-5 py-2.5;
+    @apply m-2 md:m-4 px-2.5 py-1 md:px-5 md:py-2.5;
   }
 
   .contact-resume-icon {
@@ -281,7 +281,7 @@
   }
 
   .outer-box-layout {
-    @apply m-16 p-16;
+    @apply m-2 p-2 md:m-16 md:p-16;
   }
 
   .outer-box-border {

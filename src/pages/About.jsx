@@ -17,11 +17,11 @@ function About() {
         </h2>
 
         <div className="flex col-flex md:row-flex">
-          <div className="flex-col center-all m-8 md:w-1/2 max-w-2xl" id="bio-box">
+          <div className="flex-col center-all m-2 md:m-8 md:w-1/2 max-w-2xl" id="bio-box">
             {/* Avatar */}
             <div className="flex justify-center">
               <img
-                className="rounded shadow-xl w-4/5 profile-picture-clip"
+                className="rounded shadow-xl md:w-4/5 profile-picture-clip"
                 src={ProfilePicture}
                 alt="Picture of Jonathan Cornet"
               />
