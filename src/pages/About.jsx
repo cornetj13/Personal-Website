@@ -31,7 +31,7 @@ function About() {
             <div className="my-2 md:my-6 p-6 text-subtagline-size">
               <p>
                 I am programmer who took quite the detour before ending up on
-                the path I love. I have lived other lives as a physicist, a
+                my current path. I have lived other lives as a physicist, a
                 bartender, a tour guide, and a teacher. After I finished my
                 degree in 2017, I spent some time living in Paris. While there,
                 I rediscovered my love of programming, a skill I had picked up
