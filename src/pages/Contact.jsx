@@ -39,8 +39,8 @@ function Contact() {
           I am always looking for projects, collaborations, or just plain old
           networking opportunities!
         </p>
-        <form ref={formRef} onSubmit={sendEmail}>
-          <div className="row-flex center-around">
+        <form ref={formRef} onSubmit={sendEmail} className='w-full max-w-4xl'>
+          <div className="row-flex center-around gap-2">
             <div className="input-div">
               <label htmlFor="user_name" className="text-subtagline-size block">
                 Your name:
@@ -78,24 +78,29 @@ function Contact() {
               id="message"
               name="message"
               rows="8"
-              placeholder="Write your thoughts here..."
+              placeholder="Hello there!"
               className="input-forms-colors input-textbox-layout"
             ></textarea>
           </div>
           <input
             type="submit"
             value="Send Message!"
-            className="contact-button-colors contact-button-border contact-button-layout focus:outline-none focus:ring-4 font-medium text-sm text-center"
+            className="contact-button-colors contact-button-border contact-button-layout font-medium text-sm text-center"
           />
         </form>
         <div className="w-full row-flex center-all mt-6">
-          <button
-            type="button"
-            className="contact-button-colors contact-button-border col-flex contact-button-layout focus:ring-4 focus:outline-none font-medium text-sm text-center items-center"
+          <a
+            href="2022_Programmer_CV_EOY.pdf"
+            download="2022_Programmer_CV_EOY.pdf"
           >
-            <HiDocumentText className="contact-resume-icon" />
-            <p className="m-4">Download my Resume!</p>
-          </button>
+            <button
+              type="button"
+              className="contact-button-colors contact-button-border col-flex contact-button-layout font-medium text-sm text-center items-center"
+            >
+              <HiDocumentText className="contact-resume-icon" />
+              <p className="m-4">Download my Resume!</p>
+            </button>
+          </a>
         </div>
       </div>
     </div>

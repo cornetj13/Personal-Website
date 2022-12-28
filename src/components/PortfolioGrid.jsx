@@ -6,13 +6,15 @@ import GithubFinder from '../images/Github-Finder.png';
 import CaregiverConnection from '../images/Caregiver-Connection.png';
 import SupportDesk from '../images/Support-Desk.png';
 import HouseMarketplace from '../images/Housing-Marketplace.png';
+import WeatherDashboard from '../images/Weather-Dashboard.png';
+import WorkdayScheduler from '../images/Workday-Scheduler.png';
 
 function PortfolioGrid() {
   // TODO: Create all the different portfolios as an object, and pass the object down to the cards via props.
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
-      <div className="sm:col-span-2 sm:row-span-2">
+    <div className="grid-layout center-all">
+      <div className="portfolio-card-special">
         <PortfolioCard
           image={GridlockeImage}
           gif={GridlockeGif}
@@ -21,7 +23,7 @@ function PortfolioGrid() {
           title="Gridlocke"
         />
       </div>
-      <div className="flex center-all">
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={FeedbackApp}
           website={'https://awesome-beaver-2e320b.netlify.app/'}
@@ -29,15 +31,17 @@ function PortfolioGrid() {
           title="Feedback App"
         />
       </div>
-      <div className="flex center-all">
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={GithubFinder}
-          website={'https://google.com'}
-          github={'https://google.com'}
+          website={
+            'https://react-git-hub-finder-app-gt2k0p2be-cornetj13.vercel.app/'
+          }
+          github={'https://github.com/cornetj13/React-GitHubFinder-App'}
           title="Github Profile Finder"
         />
       </div>
-      <div className="flex center-all">
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={CaregiverConnection}
           website={'https://caregiver-connection.herokuapp.com/'}
@@ -45,7 +49,7 @@ function PortfolioGrid() {
           title="Caregiver Connection"
         />
       </div>
-      <div className="lg:col-span-2 lg:row-span-2">
+      <div className="portfolio-card-special">
         <PortfolioCard
           image={HouseMarketplace}
           website={'https://react-housing-market-app.vercel.app/'}
@@ -53,7 +57,7 @@ function PortfolioGrid() {
           title="Housing Marketplace"
         />
       </div>
-      <div className="sm:col-span-2 sm:row-span-2 lg:col-span-1 lg:row-span-1 ">
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={SupportDesk}
           website={'https://cornetsupportdesk.herokuapp.com/'}
@@ -61,63 +65,24 @@ function PortfolioGrid() {
           title="Support Ticket"
         />
       </div>
-      {/* <div className="flex center-all">
+      <div className="portfolio-card-normal">
         <PortfolioCard
-          image={TestPicture1}
-          website={'https://google.com'}
-          github={'https://google.com'}
-          title="Gridlocke"
+          image={WeatherDashboard}
+          website={'https://cornetj13.github.io/weather-dashboard/'}
+          github={'https://github.com/cornetj13/weather-dashboard'}
+          title="Weather Dashboard"
         />
       </div>
-      <div className="flex center-all">
+      <div className="portfolio-card-normal">
         <PortfolioCard
-          image={TestPicture2}
-          website={'https://google.com'}
-          github={'https://google.com'}
-          title="Gridlocke"
+          image={WorkdayScheduler}
+          website={'https://cornetj13.github.io/work-day-scheduler/'}
+          github={'https://github.com/cornetj13/work-day-scheduler'}
+          title="Workday Scheduler"
         />
       </div>
-      <div className="flex center-all">
-        <PortfolioCard
-          image={TestPicture3}
-          website={'https://google.com'}
-          github={'https://google.com'}
-          title="Gridlocke"
-        />
-      </div>
-      <div className="flex center-all">
-        <PortfolioCard
-          image={TestPicture4}
-          website={'https://google.com'}
-          github={'https://google.com'}
-          title="Gridlocke"
-        />
-      </div>
-      <div className="flex center-all">
-        <PortfolioCard
-          image={TestPicture5}
-          website={'https://google.com'}
-          github={'https://google.com'}
-          title="Gridlocke"
-        />
-      </div>
-      <div className="flex center-all">
-        <PortfolioCard
-          image={TestPicture1}
-          website={'https://google.com'}
-          github={'https://google.com'}
-          title="Gridlocke"
-        />
-      </div>
-      <div className="lg:col-span-2 lg:row-span-2">
-        <PortfolioCard
-          image={TestPicture2}
-          website={'https://google.com'}
-          github={'https://google.com'}
-          title="Gridlocke"
-        />
-      </div>
-      <div className="flex center-all">
+      {/*
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={TestPicture3}
           website={'https://google.com'}
@@ -125,7 +90,7 @@ function PortfolioGrid() {
           title="Gridlocke"
         />
       </div>
-      <div className="flex center-all">
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={TestPicture4}
           website={'https://google.com'}
@@ -133,7 +98,7 @@ function PortfolioGrid() {
           title="Gridlocke"
         />
       </div>
-      <div className="flex center-all">
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={TestPicture5}
           website={'https://google.com'}
@@ -141,7 +106,7 @@ function PortfolioGrid() {
           title="Gridlocke"
         />
       </div>
-      <div className="flex center-all">
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={TestPicture1}
           website={'https://google.com'}
@@ -149,7 +114,47 @@ function PortfolioGrid() {
           title="Gridlocke"
         />
       </div>
-      <div className="flex center-all">
+      <div className="portfolio-card-normal">
+        <PortfolioCard
+          image={TestPicture2}
+          website={'https://google.com'}
+          github={'https://google.com'}
+          title="Gridlocke"
+        />
+      </div>
+      <div className="portfolio-card-normal">
+        <PortfolioCard
+          image={TestPicture3}
+          website={'https://google.com'}
+          github={'https://google.com'}
+          title="Gridlocke"
+        />
+      </div>
+      <div className="portfolio-card-normal">
+        <PortfolioCard
+          image={TestPicture4}
+          website={'https://google.com'}
+          github={'https://google.com'}
+          title="Gridlocke"
+        />
+      </div>
+      <div className="portfolio-card-normal">
+        <PortfolioCard
+          image={TestPicture5}
+          website={'https://google.com'}
+          github={'https://google.com'}
+          title="Gridlocke"
+        />
+      </div>
+      <div className="portfolio-card-normal">
+        <PortfolioCard
+          image={TestPicture1}
+          website={'https://google.com'}
+          github={'https://google.com'}
+          title="Gridlocke"
+        />
+      </div>
+      <div className="portfolio-card-normal">
         <PortfolioCard
           image={TestPicture2}
           website={'https://google.com'}

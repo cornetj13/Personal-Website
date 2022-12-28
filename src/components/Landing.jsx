@@ -131,6 +131,7 @@ function Landing() {
           spy={true}
           smooth={true}
           duration={500}
+          offset={-40}
           className="landing-my-work-text"
         >
           my work

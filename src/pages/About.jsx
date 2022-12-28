@@ -16,8 +16,8 @@ function About() {
           <mark className="text-mark">About</mark> Me
         </h2>
 
-        <div className="flex">
-          <div className="flex-col center-all m-8 w-1/2 max-w-2xl" id="bio-box">
+        <div className="flex col-flex md:row-flex">
+          <div className="flex-col center-all m-8 md:w-1/2 max-w-2xl" id="bio-box">
             {/* Avatar */}
             <div className="flex justify-center">
               <img
@@ -28,7 +28,7 @@ function About() {
             </div>
 
             {/* Bio */}
-            <div className="my-6 p-6">
+            <div className="my-2 md:my-6 p-6 text-subtagline-size">
               <p>
                 I am programmer who took quite the detour before ending up on
                 the path I love. I have lived other lives as a physicist, a
@@ -45,7 +45,7 @@ function About() {
           </div>
 
           {/* Skills */}
-          <div className="p-12 w-1/2" id="skills-box">
+          <div className="p-4 md:p-12 md:w-1/2" id="skills-box">
             <ol className="relative border-l-2 border-landing-color">
               {/* Front-End Skills */}
               <li className="skills-layout pt-4">
@@ -508,7 +508,7 @@ function About() {
                 <time className="text-subtagline-size experience-subheader">
                   Graduated: December 2022
                 </time>
-                <p className="experience-paragraph">
+                <p className="experience-paragraph text-subtagline-size">
                   Up to date on modern web developement practices and
                   methodologies.
                 </p>

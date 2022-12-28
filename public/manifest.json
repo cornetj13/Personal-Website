@@ -1,0 +1,8 @@
+{
+  "short_name": "Jon's Portfolio",
+  "name": "Jonathan Cornet's Portfolio Page",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#355070",
+  "background_color": "#4D7C0F"
+}
