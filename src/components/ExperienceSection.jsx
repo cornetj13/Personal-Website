@@ -6,7 +6,7 @@ const linkProps = {
 
 function ExperienceSection({ experience, time, description, icon, link }) {
   return (
-    <li className="relative mb-6 sm:mb-0 text-center">
+    <li className="relative mb-6 sm:mb-2 md:mb-6 text-center">
       <div className="flex items-center">
         <div className="experience-through-line"></div>
         <a href={link} {...linkProps}>

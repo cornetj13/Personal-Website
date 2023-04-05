@@ -8,7 +8,7 @@ function Portfolio() {
       id="portfolio"
     >
       <div className="inner-box-second-color inner-box-layout inner-box-border">
-        <h1 className="text-header center-all text-light-text">My Portfolio</h1>
+        <h1 className="text-header center-all text-light-text">My <mark className="text-mark-portfolio">Portfolio</mark></h1>
         {/* <div id="project-control">
           <ButtonGroup />
         </div> */}

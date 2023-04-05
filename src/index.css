@@ -168,6 +168,13 @@
       polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
   }
 
+  .bio-text {
+    @apply 
+      text-xs 
+      md:text-sm 
+      xl:text-base;
+  }
+
   .skills-circle-color {
     @apply 
     bg-button-hover 
@@ -476,8 +483,8 @@
     @apply 
       m-2 
       md:m-4 
-      px-2.5 
-      py-1 
+      px-3 
+      py-2 
       md:px-5 
       md:py-2.5;
   }
@@ -581,6 +588,14 @@
     text-light-text;
   }
 
+    .text-mark-portfolio {
+    @apply 
+      px-4 
+      rounded 
+    bg-button-hover
+    text-black;
+  }
+
   .text-tagline-size {
     @apply 
       text-sm 
@@ -590,8 +605,7 @@
 
   .text-subtagline-size {
     @apply 
-      text-xs 
-      md:text-sm 
+      text-sm 
       xl:text-base;
   }
 
