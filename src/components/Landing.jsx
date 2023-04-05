@@ -41,7 +41,7 @@ function Landing() {
         <Link
           to="navbar"
           {...linkProps}
-          offset={168}
+          offset={138}
           className="landing-button-colors landing-button-border landing-button-layout landing-button-animation center-all self-center group"
         >
           About me

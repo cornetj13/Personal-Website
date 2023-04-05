@@ -3,12 +3,14 @@ import { FaLayerGroup, FaServer, FaTerminal } from 'react-icons/fa';
 import { MdSchool, MdWork, MdMiscellaneousServices } from 'react-icons/md';
 import { GiBoots } from 'react-icons/gi';
 import { IoIosBrowsers } from 'react-icons/io';
+import SkillSection from '../components/SkillSection';
+import ExperienceSection from '../components/ExperienceSection';
 
 function About() {
   return (
     <div
-      className="outer-box-color outer-box-layout outer-box-border"
       id="about"
+      className="outer-box-color outer-box-layout outer-box-border"
     >
       <div className="inner-box-color inner-box-layout inner-box-border">
         {/* About Section Title */}
@@ -17,566 +19,284 @@ function About() {
         </h2>
 
         <div className="flex col-flex lg:row-flex">
-          <div
-            className="flex-col center-all m-2 md:m-8 lg:w-1/2 max-w-2xl"
-            id="bio-box"
-          >
+          <div className="flex-col center-all m-2 lg:m-8 lg:w-1/2 max-w-2xl">
             {/* Avatar */}
             <div className="flex mx-auto w-4/5">
               <img
-                className="rounded shadow-xl w-full h-full lg:mx-auto profile-picture-clip"
+                className="w-full h-full rounded shadow-xl lg:mx-auto profile-picture-clip"
                 src={ProfilePicture}
-                alt="Picture of Jonathan Cornet"
+                alt="Jonathan Cornet, author of the website"
               />
             </div>
 
             {/* Bio */}
-            <div className="my-2 md:my-6 p-6 text-subtagline-size">
+            <div className="my-2 md:mt-6 p-6 text-subtagline-size">
               <p>
-                I am programmer who took quite the detour before ending up on my
-                current path. I have lived other lives as a physicist, a
-                bartender, a tour guide, and a teacher. After I finished my
-                degree in 2017, I spent some time living in Paris. While there,
-                I rediscovered my love of programming, a skill I had picked up
-                in college. I decided to make it my fulltime career at the start
-                of 2020, and have worked in a variety of fields, from
-                computational modeling to web developement. I'm doing what I
-                love and living by the motto: "always learning, always
-                improving, and always coding"!
+                As a software developer, I bring a diverse background to the
+                table. Prior to pursuing a career in programming, I've explored
+                various paths, including engineering, hospitality, tourism, and
+                education. However, it was during my time in Paris in 2017 that
+                I rediscovered my passion for programming, a skill I had first
+                picked up in college. Since then, I've been fully committed to
+                my craft, working on a range of projects in fields such as
+                computational modeling and web development. I'm constantly
+                pushing myself to learn and improve, always striving to write
+                elegant and efficient code.
               </p>
             </div>
           </div>
 
           {/* Skills */}
-          <div className="p-4 md:p-12 md:w-1/2" id="skills-box">
+          <div className="p-4 md:px-12 lg:w-1/2">
             <ol className="relative border-l-2 border-landing-color">
               {/* Front-End Skills */}
-              <li className="skills-layout pt-4">
-                <span className="skills-circle-color skills-circle-layout">
-                  <IoIosBrowsers className="skills-circle-icon" />
-                </span>
-                <h3 className="skills-header text-tagline-size">Front-End:</h3>
-                <p className="text-subtagline-size skills-text">
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    HTML
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    CSS
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://sass-lang.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    SASS
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.javascript.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    JavaScript (ES5/6)
-                  </a>
-                </p>
-              </li>
+              <SkillSection
+                skill="Front-End"
+                place="Top"
+                icon={<IoIosBrowsers className="skills-circle-icon" />}
+                links={[
+                  {
+                    href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+                    label: 'HTML',
+                  },
+                  {
+                    href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+                    label: 'CSS',
+                  },
+                  { href: 'https://sass-lang.com/', label: 'SASS' },
+                  {
+                    href: 'https://www.javascript.com/',
+                    label: 'JavaScript (ES5/6)',
+                  },
+                ]}
+              />
 
               {/* Back-End Skills */}
-              <li className="skills-layout">
-                <span className="skills-circle-color skills-circle-layout">
-                  <FaServer className="skills-circle-icon" />
-                </span>
-                <h3 className="skills-header text-tagline-size">Back-End:</h3>
-                <p className="text-subtagline-size skills-text">
-                  <a
-                    href="https://en.wikipedia.org/wiki/SQL"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    SQL
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.mysql.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    MySQL
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.mongodb.com/home"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    MongoDB
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://graphql.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    GraphQL
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://sequelize.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Sequelize
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.json.org/json-en.html"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    JSON
-                  </a>
-                </p>
-              </li>
+              <SkillSection
+                skill="Back-End"
+                place="Middle"
+                icon={<FaServer className="skills-circle-icon" />}
+                links={[
+                  {
+                    href: 'https://en.wikipedia.org/wiki/SQL',
+                    label: 'SQL',
+                  },
+                  {
+                    href: 'https://www.mysql.com/',
+                    label: 'MySQL',
+                  },
+                  {
+                    href: 'https://www.postgresql.org/',
+                    label: 'PostgreSQL',
+                  },
+                  {
+                    href: 'https://graphql.org/',
+                    label: 'GraphQL',
+                  },
+                  { href: 'https://www.mongodb.com/home', label: 'MongoDB' },
+                  {
+                    href: 'https://sequelize.org/',
+                    label: 'Sequelize',
+                  },
+                  {
+                    href: 'https://www.json.org/json-en.html',
+                    label: 'JSON',
+                  },
+                ]}
+              />
 
-              {/* Multi-Purpose Skills */}
-              <li className="skills-layout">
-                <span className="skills-circle-color skills-circle-layout">
-                  <FaTerminal className="skills-circle-icon" />
-                </span>
-                <h3 className="skills-header text-tagline-size">
-                  Multi-Purpose:
-                </h3>
-                <p className="text-subtagline-size skills-text">
-                  <a
-                    href="https://www.python.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    Python
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://fortran-lang.org/en/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    FORTRAN
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://learn.microsoft.com/en-us/dotnet/csharp/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    C#
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.java.com/en/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Java
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://isocpp.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    C++
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://en.wikipedia.org/wiki/C_(programming_language)"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    C
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://kotlinlang.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Kotlin
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://en.wikipedia.org/wiki/Object-oriented_programming"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    OOP Methodology
-                  </a>
-                </p>
-              </li>
+              {/* Programming Language Skills */}
+              <SkillSection
+                skill="Programming Languages"
+                place="Middle"
+                icon={<FaTerminal className="skills-circle-icon" />}
+                links={[
+                  {
+                    href: 'https://www.python.org/',
+                    label: 'Python',
+                  },
+                  {
+                    href: 'https://fortran-lang.org/en/',
+                    label: 'FORTRAN',
+                  },
+                  {
+                    href: 'https://en.wikipedia.org/wiki/C_(programming_language)',
+                    label: 'C',
+                  },
+                  {
+                    href: 'https://isocpp.org/',
+                    label: 'C++',
+                  },
+                  {
+                    href: 'https://learn.microsoft.com/en-us/dotnet/csharp/',
+                    label: 'C#',
+                  },
+                  {
+                    href: 'https://www.java.com/en/',
+                    label: 'Java',
+                  },
+                  {
+                    href: 'https://kotlinlang.org/',
+                    label: 'Kotlin',
+                  },
+                  {
+                    href: 'https://www.rust-lang.org/',
+                    label: 'Rust',
+                  },
+                ]}
+              />
 
-              {/* Frameworks */}
-              <li className="skills-layout">
-                <span className="skills-circle-color skills-circle-layout">
-                  <FaLayerGroup className="skills-circle-icon" />
-                </span>
-                <h3 className="skills-header text-tagline-size">Frameworks:</h3>
-                <p className="text-subtagline-size skills-text">
-                  <a
-                    href="https://nodejs.org/en/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    Node JS
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://reactjs.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    React JS
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://expressjs.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Express JS
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.npmjs.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    NPM
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://tailwindcss.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Tailwind
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://getbootstrap.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Bootstrap
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.ibm.com/cloud/learn/rest-apis"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    REST APIs
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://jquery.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    jQuery
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    AJAX
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://mongoosejs.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Mongoose JS
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://firebase.google.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Firebase
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://aws.amazon.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    AWS
-                  </a>
-                </p>
-              </li>
+              {/* Frameworks/Libraries */}
+              <SkillSection
+                skill="Frameworks/Libraries"
+                place="Middle"
+                icon={<FaLayerGroup className="skills-circle-icon" />}
+                links={[
+                  {
+                    href: 'https://nodejs.org/en/',
+                    label: 'Node JS',
+                  },
+                  {
+                    href: 'https://expressjs.com/',
+                    label: 'Express',
+                  },
+                  {
+                    href: 'https://mongoosejs.com/',
+                    label: 'Mongoose',
+                  },
+                  {
+                    href: 'https://reactjs.org/',
+                    label: 'React',
+                  },
+                  {
+                    href: 'https://nextjs.org/',
+                    label: 'Next JS',
+                  },
+                  {
+                    href: 'https://angular.io/',
+                    label: 'Angular',
+                  },
+                  {
+                    href: 'https://www.npmjs.com/',
+                    label: 'NPM',
+                  },
+                  {
+                    href: 'https://tailwindcss.com/',
+                    label: 'Tailwind',
+                  },
+                  {
+                    href: 'https://getbootstrap.com/',
+                    label: 'Bootstrap',
+                  },
+                  {
+                    href: 'https://jquery.com/',
+                    label: 'JQuery',
+                  },
+                  {
+                    href: 'https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started',
+                    label: 'AJAX',
+                  },
+                  {
+                    href: 'https://firebase.google.com/',
+                    label: 'Firebase',
+                  },
+                  {
+                    href: 'https://aws.amazon.com/',
+                    label: 'AWS',
+                  },
+                ]}
+              />
 
               {/* Misc Skills */}
-              <li className="skills-layout-bottom">
-                <span className="skills-circle-color skills-circle-layout">
+              <SkillSection
+                skill="Misc"
+                place="Bottom"
+                icon={
                   <MdMiscellaneousServices className="skills-circle-icon" />
-                </span>
-                <h3 className="skills-header text-tagline-size">Misc:</h3>
-                <p className="text-subtagline-size skills-text">
-                  <a
-                    href="https://unity.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    Unity
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.adobe.com/creativecloud.html"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Adobe XD
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.figma.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Figma
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://www.aseprite.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Aseprite
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://en.wikipedia.org/wiki/Agile_software_development"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Agile
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    MVC
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://jestjs.io/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    Testing (Jest JS)
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://en.wikipedia.org/wiki/MEAN_(solution_stack)"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    MERN Stack
-                  </a>{' '}
-                  |
-                  <a
-                    href="https://en.wikipedia.org/wiki/Progressive_web_app"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="link-hover"
-                  >
-                    {' '}
-                    PWAs
-                  </a>
-                </p>
-              </li>
+                }
+                links={[
+                  {
+                    href: 'https://www.ibm.com/cloud/learn/rest-apis',
+                    label: 'REST API',
+                  },
+                  {
+                    href: 'https://unity.com/',
+                    label: 'Unity',
+                  },
+                  {
+                    href: 'https://www.adobe.com/creativecloud.html',
+                    label: 'Adobe XD',
+                  },
+                  {
+                    href: 'https://www.figma.com/',
+                    label: 'Figma',
+                  },
+                  {
+                    href: 'https://www.aseprite.org/',
+                    label: 'Aseprite',
+                  },
+                  {
+                    href: 'https://en.wikipedia.org/wiki/Agile_software_development',
+                    label: 'Agile',
+                  },
+                  {
+                    href: 'https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller',
+                    label: 'MVC Architecture',
+                  },
+                  {
+                    href: 'https://jestjs.io/',
+                    label: 'Jest',
+                  },
+                  {
+                    href: 'https://en.wikipedia.org/wiki/Progressive_web_app',
+                    label: 'PWA',
+                  },
+                  {
+                    href: 'https://en.wikipedia.org/wiki/Object-oriented_programming',
+                    label: 'OOP Methodology',
+                  },
+                  {
+                    href: 'https://en.wikipedia.org/wiki/MEAN_(solution_stack)',
+                    label: 'MERN Stack',
+                  },
+                ]}
+              />
             </ol>
           </div>
         </div>
 
         {/* Experience */}
         <div id="experience-box">
-          <ol className="col-flex md:row-flex">
+          <ol className="col-flex lg:row-flex">
             {/* Bootcamp Experience */}
-            <li className="relative mb-6 sm:mb-0 text-center">
-              <div className="flex items-center">
-                <div className="experience-through-line"></div>
-                <a
-                  href="https://bootcamp.uw.edu/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="z-10"
-                >
-                  <div className="experience-circle-color experience-circle-layout experience-circle-animation experience-circle-hover-animation">
-                    <GiBoots className="experience-circle-icon" />
-                  </div>
-                </a>
-                <div className="experience-through-line"></div>
-              </div>
-              <div className="mt-3 sm:pr-8">
-                <h3 className="text-tagline-size font-semibold">
-                  University of Washington Full-stack Bootcamp Graduate
-                </h3>
-                <time className="text-subtagline-size experience-subheader">
-                  Graduated: December 2022
-                </time>
-                <p className="experience-paragraph text-subtagline-size">
-                  Up to date on modern web developement practices and
-                  methodologies.
-                </p>
-              </div>
-            </li>
+            <ExperienceSection
+              experience="University of Washington Full-stack Bootcamp Graduate"
+              time="Graduated: December 2022"
+              description="Up to date on modern web developement practices and
+                  methodologies."
+              icon={<GiBoots className="experience-circle-icon" />}
+              link="https://bootcamp.uw.edu/"
+            />
 
             {/* University Experience */}
-            <li className="relative mb-6 sm:mb-0  text-center">
-              <div className="flex items-center">
-                <div className="experience-through-line"></div>
-                <a
-                  href="https://www.wwu.edu/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="z-10"
-                >
-                  <div className="experience-circle-color experience-circle-layout experience-circle-animation experience-circle-hover-animation">
-                    <MdSchool className="experience-circle-icon" />
-                  </div>
-                </a>
-                <div className="experience-through-line"></div>
-              </div>
-              <div className="mt-3 sm:pr-8">
-                <h3 className="text-tagline-size font-semibold">
-                  Western Washington University Double Major
-                </h3>
-                <time className="text-subtagline-size experience-subheader">
-                  Graduated: June 2017
-                </time>
-                <p className="experience-paragraph">
-                  Bachelor of Science in Physics and Bachelor of Arts in Chinese
-                  Language
-                </p>
-              </div>
-            </li>
+            <ExperienceSection
+              experience="Western Washington University Double Major"
+              time="Graduated: June 2017"
+              description="Bachelor of Science in Physics and Bachelor of Arts in Chinese
+              Language."
+              icon={<MdSchool className="experience-circle-icon" />}
+              link="https://www.wwu.edu/"
+            />
 
             {/* Work Experience */}
-            <li className="relative mb-6 sm:mb-0  text-center">
-              <div className="flex items-center">
-                <div className="experience-through-line"></div>
-                <a
-                  href="https://cvdyn.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="z-10"
-                >
-                  <div className="experience-circle-color experience-circle-layout experience-circle-animation experience-circle-hover-animation">
-                    <MdWork className="experience-circle-icon" />
-                  </div>
-                </a>
-                <div className="experience-through-line"></div>
-              </div>
-              <div className="mt-3 sm:pr-8">
-                <h3 className="text-tagline-size font-semibold">
-                  3 Years Experience In Industry
-                </h3>
-                <time className="text-subtagline-size experience-subheader">
-                  Joined Conveyor Dynamics, Inc. in March 2020
-                </time>
-                <p className="experience-paragraph">
-                  Working as a Software Engineer refactoring a FORTRAN legacy
-                  codebase.
-                </p>
-              </div>
-            </li>
+            <ExperienceSection
+              experience="3 Years Experience In Industry"
+              time="Joined Conveyor Dynamics, Inc. in March 2020"
+              description="Working as a Software Engineer refactoring a FORTRAN legacy
+              codebase."
+              icon={<MdWork className="experience-circle-icon" />}
+              link="https://cvdyn.com/"
+            />
           </ol>
         </div>
       </div>
