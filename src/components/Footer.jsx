@@ -26,7 +26,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-        <p className="text-sm mt-4 p-2">
+        <p className="text-sm m-4 xl:mt-6 p-2">
           © 2022 Jonathan Cornet. All Rights Reserved.
         </p>
       </div>
