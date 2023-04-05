@@ -16,15 +16,15 @@ function About() {
           <mark className="text-mark">About</mark> Me
         </h2>
 
-        <div className="flex col-flex md:row-flex">
+        <div className="flex col-flex lg:row-flex">
           <div
-            className="flex-col center-all m-2 md:m-8 md:w-1/2 max-w-2xl"
+            className="flex-col center-all m-2 md:m-8 lg:w-1/2 max-w-2xl"
             id="bio-box"
           >
             {/* Avatar */}
             <div className="flex mx-auto w-4/5">
               <img
-                className="rounded shadow-xl w-full h-full md:mx-auto profile-picture-clip"
+                className="rounded shadow-xl w-full h-full lg:mx-auto profile-picture-clip"
                 src={ProfilePicture}
                 alt="Picture of Jonathan Cornet"
               />

@@ -13,11 +13,13 @@
 /* @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap'); */
 
 /* Variable Declaration */
+/* Component Layer */
 @layer components {
+
   /* Landing Elements */
   .landing-colors {
     @apply 
-      text-light-text;
+    text-light-text;
   }
 
   .landing-layout {
@@ -47,17 +49,18 @@
     @apply 
       cursor-pointer
       font-bold
-      text-button-hover
-      hover:text-button-light;
+      text-xl
+    text-button-light
+    hover:text-button-hover;
   }
 
   .landing-button-colors {
     @apply 
-      bg-button-dark
-      hover:bg-button-hover
-      text-light-text
-      border-button-light
-      hover:border-button-dark;
+    bg-button-dark
+    hover:bg-button-hover
+    text-light-text
+    border-button-light
+    hover:border-button-dark;
   }
 
   .landing-button-border {
@@ -105,8 +108,8 @@
   /* Navbar Elements */
   .navbar-colors {
     @apply 
-      bg-button-dark 
-      text-light-text;
+    bg-button-dark 
+    text-light-text;
   }
 
   .navbar-layout {
@@ -114,7 +117,7 @@
       py-4 
       px-2 
       border-b-4 
-      border-button-light;
+    border-button-light;
   }
 
   .navbar-placement {
@@ -146,7 +149,17 @@
       delay-100 
       hover:scale-110 
       duration-300 
-      hover:text-button-light;
+    hover:text-button-light;
+  }
+
+  /* Main Section Elements */
+  .main-layout {
+    @apply 
+      pb-14 
+      pt-8 
+      px-2 
+      md:pt-10 
+      md:pb-8;
   }
 
   /* About Page Elements */
@@ -157,8 +170,8 @@
 
   .skills-circle-color {
     @apply 
-      bg-button-hover 
-      ring-light-text;
+    bg-button-hover 
+    ring-light-text;
   }
 
   .skills-circle-layout {
@@ -212,202 +225,431 @@
 
   .skills-text {
     @apply 
-      text-button-dark 
       ml-2 
       text-base 
       font-semibold 
-      xl:mb-4;
+      xl:mb-4
+    text-button-dark;
   }
 
   .link-hover {
     @apply 
-      hover:text-button-hover;
+    hover:text-button-hover;
   }
 
   .experience-circle-color {
-    @apply bg-button-dark text-light-text ring-light-text hover:bg-button-light  hover:text-black transition duration-300;
+    @apply 
+      transition 
+      duration-300
+    bg-button-dark 
+    text-light-text 
+    ring-light-text 
+    hover:bg-button-light 
+    hover:text-black ;
   }
 
   .experience-circle-layout {
-    @apply flex justify-center items-center w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20 rounded-full ring-4 sm:ring-8 shrink-0;
+    @apply 
+      flex 
+      justify-center 
+      items-center 
+      w-12 
+      h-12 
+      rounded-full 
+      ring-4 
+      shrink-0
+      sm:ring-8
+      md:w-16 
+      md:h-16 
+      xl:w-20 
+      xl:h-20;
   }
 
   .experience-circle-icon {
-    @apply text-[24px] md:text-[28px] xl:text-[40px];
+    @apply 
+      text-[24px] 
+      md:text-[28px] 
+      xl:text-[40px];
   }
 
   .experience-circle-animation {
-    @apply cursor-pointer animate-clickable;
+    @apply 
+      cursor-pointer 
+      animate-clickable;
   }
 
   .experience-circle-hover-animation {
-    @apply transition-all ease-in-out hover:scale-110 hover:animate-none duration-300;
+    @apply 
+      transition-all 
+      ease-in-out 
+      duration-300
+      hover:scale-110 
+      hover:animate-none;
   }
 
   .experience-through-line {
-    @apply flex w-full bg-landing-color h-0.5;
+    @apply 
+      flex 
+      w-full 
+      h-0.5 
+    bg-landing-color;
   }
 
   .experience-subheader {
-    @apply block my-2 font-normal leading-none text-gray-600;
+    @apply 
+      block 
+      my-2 
+      font-normal 
+      leading-none 
+    text-gray-600;
   }
 
   .experience-paragraph {
-    @apply mb-6 md:m-0 text-base font-normal;
+    @apply 
+      mb-6
+      text-base 
+      font-normal
+      md:m-0 ;
   }
 
   /* Portfolio Page Elements */
-  .portfolio-card-layout {
-    @apply absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black rounded-xl;
-  }
-
   .portfolio-card-normal {
-    @apply flex center-all;
+    @apply 
+      flex 
+      center-all;
   }
 
   .portfolio-card-special {
-    @apply sm:col-span-2 sm:row-span-2 lg:col-span-3 lg:row-span-3;
-  }
-
-  .portfolio-card-title {
-    @apply text-center bg-black w-full md:text-lg lg:text-lg 2xl:text-3xl font-bold text-light-text rounded-t-xl p-2;
+    @apply 
+      sm:col-span-2 
+      sm:row-span-2 
+      lg:col-span-3 
+      lg:row-span-3;
   }
 
   .portfolio-button-icon {
-    @apply my-4 w-6 h-6 md:w-12 md:h-12 xl:w-20 xl:h-20 cursor-pointer;
+    @apply 
+      cursor-pointer 
+      my-4 
+      w-6 
+      h-6 
+      md:w-12 
+      md:h-12 
+      xl:w-20 
+      xl:h-20;
   }
 
+  /* Portfolio Card Elements */
+  .portfolio-card-div {
+    @apply 
+      relative 
+      rounded-xl 
+      transition-transform 
+      duration-500 
+      hover:scale-95 
+    bg-black;
+  }
+
+  .portfolio-card-image {
+    @apply 
+      w-full 
+      h-full 
+      rounded-xl 
+      object-cover;
+  }
+
+  .portfolio-card-hover-image {
+    @apply 
+      absolute 
+      top-0 
+      left-0 
+      opacity-0;
+  }
+
+  .portfolio-card-layout {
+    @apply 
+      absolute 
+      inset-0
+      rounded-xl
+      bg-gradient-to-br 
+      from-transparent 
+      via-transparent 
+      opacity-0
+      transition-all 
+      duration-500
+    to-black;
+  }
+  
+  .portfolio-card-title {
+    @apply 
+      text-center 
+      w-full
+      p-2
+      font-bold
+      rounded-t-xl 
+      md:text-lg 
+      lg:text-lg 
+      2xl:text-3xl
+    bg-black 
+    text-light-text;
+  }
+  
   .portfolio-button-color {
-    @apply ring-light-text;
+    @apply 
+    ring-light-text;
   }
 
   .portfolio-button-layout {
-    @apply -translate-y-[50%] -translate-x-[50%] justify-center items-center w-10 h-10 xl:w-14 xl:h-14 rounded-lg ring-2;
+    @apply 
+      -translate-y-[50%] 
+      -translate-x-[50%] 
+      flex 
+      justify-center 
+      items-center 
+      w-10 
+      h-10 
+      rounded-lg 
+      ring-2 
+      xl:w-14 
+      xl:h-14;
   }
 
   .portfolio-icons {
-    @apply text-[28px] xl:text-[40px] text-light-text;
+    @apply 
+      text-[28px] 
+      xl:text-[40px] 
+    text-light-text;
   }
 
   /* Contact Page Elements */
-
   .input-div {
-    @apply col-flex center-all mb-6;
+    @apply 
+      col-flex 
+      center-all 
+      mb-6;
   }
 
   .input-forms-colors {
-    @apply bg-gray-50 border-button-dark;
+    @apply 
+    bg-gray-50 
+    border-button-dark;
   }
 
   .input-forms-layout {
-    @apply border-2 rounded-lg block p-2.5 m-4 w-full;
+    @apply 
+      border-2 
+      rounded-lg 
+      block 
+      p-2.5 
+      m-4 
+      w-full;
   }
 
   .input-textbox-layout {
-    @apply border-2 rounded-lg block p-2.5 w-full;
+    @apply
+      block 
+      p-2.5 
+      w-full
+      border-2 
+      rounded-lg;
   }
 
   .contact-button-colors {
-    @apply bg-button-dark text-light-text border-button-hover hover:bg-button-hover hover:border-button-dark transition-colors duration-300;
+    @apply 
+      transition-colors 
+      duration-300 
+    bg-button-dark 
+    text-light-text 
+    border-button-hover 
+    hover:bg-button-hover 
+    hover:border-button-dark;
   }
 
   .contact-button-border {
-    @apply rounded-lg border-2;
+    @apply 
+      rounded-lg 
+      border-2;
   }
 
   .contact-button-layout {
-    @apply m-2 md:m-4 px-2.5 py-1 md:px-5 md:py-2.5;
+    @apply 
+      m-2 
+      md:m-4 
+      px-2.5 
+      py-1 
+      md:px-5 
+      md:py-2.5;
   }
 
   .contact-resume-icon {
-    @apply text-[40px] mt-2;
+    @apply 
+      text-[40px] 
+      mt-2;
   }
 
   /* Footer Elements */
-
   .footer-button-color {
-    @apply ring-light-text;
+    @apply 
+    ring-light-text;
   }
 
   .footer-button-layout {
-    @apply absolute -top-[72px] justify-center items-center w-16 h-16 xl:w-20 xl:h-20 rounded-lg ring-2;
+    @apply 
+      absolute 
+      -top-[72px] 
+      justify-center 
+      items-center 
+      w-16 
+      h-16
+      rounded-lg 
+      ring-2
+      xl:w-20 
+      xl:h-20;
   }
 
   .footer-button-animation {
-    @apply cursor-pointer transition-all ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300;
+    @apply 
+      cursor-pointer 
+      transition-all 
+      ease-in-out 
+      delay-100
+      duration-300
+      hover:-translate-y-1 
+      hover:scale-110;
   }
 
   .footer-icons {
-    @apply text-[28px] xl:text-[40px] text-light-text;
+    @apply 
+      text-[28px] 
+      xl:text-[40px] 
+    text-light-text;
   }
+}
 
-  /* Util Elements */
-
+/* Utilities Layer */
+@layer utilities {
   .center-all {
-    @apply justify-center items-center text-center;
+    @apply 
+      justify-center 
+      items-center 
+      text-center;
   }
 
   .center-between {
-    @apply justify-between items-center text-center;
+    @apply 
+      justify-between 
+      items-center 
+      text-center;
   }
 
   .center-around {
-    @apply justify-around items-center text-center;
+    @apply 
+      justify-around 
+      items-center 
+      text-center;
   }
 
   .col-flex {
-    @apply flex flex-col;
+    @apply 
+      flex 
+      flex-col;
   }
 
   .row-flex {
-    @apply flex flex-row;
+    @apply 
+      flex 
+      flex-row;
   }
 
   .text-header {
-    @apply mb-12 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl;
+    @apply 
+      mb-12 
+      text-4xl 
+      font-extrabold 
+      tracking-tight 
+      leading-none 
+      md:text-5xl 
+      lg:text-6xl;
   }
 
   .text-mark {
-    @apply bg-button-dark text-light-text px-4 rounded;
+    @apply 
+      px-4 
+      rounded 
+    bg-button-dark 
+    text-light-text;
   }
 
   .text-tagline-size {
-    @apply text-sm md:text-base xl:text-lg;
+    @apply 
+      text-sm 
+      md:text-base 
+      xl:text-lg;
   }
 
   .text-subtagline-size {
-    @apply text-xs md:text-sm xl:text-base;
+    @apply 
+      text-xs 
+      md:text-sm 
+      xl:text-base;
   }
 
   .outer-box-color {
-    @apply bg-background-color;
+    @apply 
+      bg-background-color;
   }
 
   .outer-box-layout {
-    @apply mx-2 mb-2 p-2 md:mx-16 md:mb-16 md:p-16;
+    @apply 
+      mx-2 
+      mb-2 
+      p-2 
+      md:mx-16 
+      md:mb-16 
+      md:p-16;
   }
 
   .outer-box-border {
-    @apply rounded-xl;
+    @apply 
+      rounded-xl;
   }
 
   .inner-box-color {
-    @apply bg-inner-bg text-gray-900;
+    @apply 
+    bg-inner-bg 
+    text-gray-900;
   }
 
   .inner-box-second-color {
-    @apply bg-button-dark text-gray-900;
+    @apply 
+    bg-button-dark 
+    text-gray-900;
   }
 
   .inner-box-layout {
-    @apply p-10;
+    @apply 
+      p-10;
   }
 
   .inner-box-border {
-    @apply rounded-lg;
+    @apply 
+      rounded-lg;
   }
 
   .grid-layout {
-    @apply grid grid-flow-dense auto-rows-auto grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 lg:p-8;
+    @apply 
+      grid 
+      grid-flow-dense 
+      auto-rows-auto 
+      grid-cols-1 
+      gap-4 
+      sm:grid-cols-2 
+      lg:grid-cols-4  
+      lg:p-8;
   }
+}
+
+@media (max-width: 600px) {
+  /* Mobile Device Components */
+
 }

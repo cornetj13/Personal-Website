@@ -1,64 +1,71 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
 
+const linkProps = {
+  spy: true,
+  smooth: true,
+  duration: 500,
+};
+
 function Navbar() {
-  const [navbarClass, setNavbarClass] = useState('navbar-placement');
-  
+  const [isSticky, setIsSticky] = useState(false);
+  const navbarRef = useRef(null);
+
   useEffect(() => {
+    const stickNavbar = () => {
+      setIsSticky(window.scrollY > window.innerHeight);
+    };
+
     window.addEventListener('scroll', stickNavbar);
-    return () => window.removeEventListener()
+
+    return () => window.removeEventListener('scroll', stickNavbar);
   }, []);
 
-  const stickNavbar = () => {
-    if(window !== undefined) {
-      let windowHeight = window.scrollY;
-      windowHeight > window.innerHeight ? setNavbarClass('sticky-navbar-placement') : setNavbarClass('navbar-placement')
-    }
-  }
+  const navbarClass = isSticky ? 'sticky-navbar-placement' : 'navbar-placement';
 
   return (
-    <nav
-      className={`navbar-colors ${navbarClass}`}
-      id="navbar"
-    >
-      <ul className="row-flex center-around navbar-layout">
-        <li>
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="navbar-text navbar-animation"
-          >
-            About
-          </Link>
-        </li>
+    <>
+      <nav
+        id="navbar"
+        ref={navbarRef}
+        className={`navbar-colors ${navbarClass}`}
+      >
+        <ul className="row-flex center-around navbar-layout">
+          <li>
+            <Link
+              to="about"
+              {...linkProps}
+              className="navbar-text navbar-animation"
+            >
+              About
+            </Link>
+          </li>
 
-        <li>
-          <Link
-            to="portfolio"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="navbar-text navbar-animation"
-          >
-            Portfolio
-          </Link>
-        </li>
+          <li>
+            <Link
+              to="portfolio"
+              {...linkProps}
+              className="navbar-text navbar-animation"
+            >
+              Portfolio
+            </Link>
+          </li>
 
-        <li>
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="navbar-text navbar-animation"
-          >
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
+          <li>
+            <Link
+              to="contact"
+              {...linkProps}
+              className="navbar-text navbar-animation"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      {isSticky && (
+        <div style={{ height: navbarRef.current.clientHeight }}></div>
+      )}
+    </>
   );
 }
 

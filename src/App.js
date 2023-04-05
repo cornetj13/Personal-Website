@@ -7,16 +7,18 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <>
       <Landing />
       <Navbar />
-      <div className="bg-lime-900 pt-2 md:pt-8">
+      <main className="bg-lime-900 main-layout">
+        {/* Placeholder element for Navbar */}
+        <div style={{ height: '64px' }}></div>
         <About />
         <Portfolio />
         <Contact />
-        <Footer />
-      </div>
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 }
 
