@@ -14,115 +14,214 @@
 
 /* Variable Declaration */
 @layer components {
-
   /* Landing Elements */
-
   .landing-colors {
-    @apply bg-landing-color text-light-text;
+    @apply 
+      text-light-text;
   }
 
   .landing-layout {
-    @apply h-screen;
+    @apply 
+      h-screen;
   }
 
   .landing-header {
-    @apply mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl z-10;
+    @apply 
+      mb-4
+      text-4xl
+      font-extrabold
+      tracking-tight
+      leading-none
+      md:text-5xl
+      lg:text-6xl
+      z-10;
   }
 
   .landing-tagline {
-    @apply mb-6 font-normal;
+    @apply 
+      mb-6 
+      font-normal;
   }
 
   .landing-my-work-text {
-    @apply text-button-hover font-bold cursor-pointer hover:text-button-light;
+    @apply 
+      cursor-pointer
+      font-bold
+      text-button-hover
+      hover:text-button-light;
   }
 
   .landing-button-colors {
-    @apply bg-button-dark hover:bg-button-hover text-light-text border-button-light hover:border-button-dark;
+    @apply 
+      bg-button-dark
+      hover:bg-button-hover
+      text-light-text
+      border-button-light
+      hover:border-button-dark;
   }
 
   .landing-button-border {
-    @apply rounded-lg border-2;
+    @apply 
+      rounded-lg 
+      border-2;
   }
 
   .landing-button-layout {
-    @apply w-48 py-3 px-5 inline-flex text-base font-medium;
+    @apply 
+      w-48
+      py-3
+      px-5
+      inline-flex
+      text-base
+      font-medium;
   }
 
   .landing-button-animation {
-    @apply cursor-pointer transition-all ease-in-out delay-100 hover:translate-y-1 hover:scale-110 duration-300;
+    @apply 
+      cursor-pointer
+      transition-all
+      ease-in-out
+      delay-100
+      hover:translate-y-1
+      hover:scale-110
+      duration-300;
   }
 
   .landing-button-arrow-layout {
-    @apply ml-2 -mr-1 w-5 h-5;
+    @apply 
+      ml-2 
+      -mr-1 
+      w-5 
+      h-5;
   }
 
   .landing-button-arrow-spin {
-    @apply transition-all ease-in-out duration-500;
+    @apply 
+      transition-all 
+      ease-in-out 
+      duration-500;
   }
 
   /* Navbar Elements */
-
   .navbar-colors {
-    @apply bg-button-dark text-light-text;
+    @apply 
+      bg-button-dark 
+      text-light-text;
   }
 
   .navbar-layout {
-    @apply py-4 px-2 border-b-4 border-button-light;
+    @apply 
+      py-4 
+      px-2 
+      border-b-4 
+      border-button-light;
   }
 
   .navbar-placement {
-    @apply relative;
+    @apply 
+      relative;
   }
 
   .sticky-navbar-placement {
-    @apply fixed top-0 left-0 w-full z-20;
+    @apply 
+      fixed 
+      top-0 
+      left-0 
+      w-full 
+      z-20;
   }
 
   .navbar-text {
-    @apply font-semibold text-lg;
+    @apply 
+      font-semibold 
+      text-lg;
   }
 
   .navbar-animation {
-    @apply inline-block cursor-pointer transition-all ease-in-out delay-100 hover:scale-110 hover:text-button-light duration-300;
+    @apply 
+      inline-block 
+      cursor-pointer 
+      transition-all 
+      ease-in-out 
+      delay-100 
+      hover:scale-110 
+      duration-300 
+      hover:text-button-light;
   }
 
   /* About Page Elements */
-
   .profile-picture-clip {
-    clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+    clip-path: 
+      polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
   }
 
   .skills-circle-color {
-    @apply bg-button-hover ring-light-text;
+    @apply 
+      bg-button-hover 
+      ring-light-text;
   }
 
   .skills-circle-layout {
-    @apply flex absolute w-10 h-10 md:w-12 md:h-12 -left-[21px] md:-left-[25px] justify-center items-center xl:-left-[33px] xl:w-16 xl:h-16 rounded-full ring-4;
+    @apply 
+      flex 
+      absolute
+      justify-center 
+      items-center 
+      w-10 
+      h-10 
+      -left-[21px]
+      rounded-full 
+      ring-4
+      md:w-12 
+      md:h-12 
+      md:-left-[25px] 
+      xl:-left-[33px] 
+      xl:w-16 
+      xl:h-16;
   }
 
   .skills-circle-icon {
-    @apply text-[16px] md:text-[20px] xl:text-[28px]
+    @apply 
+      text-[16px] 
+      md:text-[20px] 
+      xl:text-[28px];
   }
 
   .skills-layout {
-    @apply mb-16 ml-12 xl:mb-20 xl:ml-16;
+    @apply 
+      mb-16 
+      ml-12 
+      xl:mb-20 
+      xl:ml-16;
   }
 
   .skills-layout-bottom {
-    @apply mb-4 ml-12 xl:mb-8 xl:ml-16;
+    @apply 
+      mb-4 
+      ml-12 
+      xl:mb-8 
+      xl:ml-16;
   }
 
   .skills-header {
-    @apply mb-1 ml-2 font-semibold;
+    @apply 
+      mb-1 
+      ml-2 
+      font-semibold;
   }
 
   .skills-text {
-    @apply text-button-dark ml-2 text-base font-semibold xl:mb-4;
+    @apply 
+      text-button-dark 
+      ml-2 
+      text-base 
+      font-semibold 
+      xl:mb-4;
   }
 
   .link-hover {
-    @apply hover:text-button-hover;
+    @apply 
+      hover:text-button-hover;
   }
 
   .experience-circle-color {
@@ -138,7 +237,11 @@
   }
 
   .experience-circle-animation {
-    @apply cursor-pointer transition-all ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300;
+    @apply cursor-pointer animate-clickable;
+  }
+
+  .experience-circle-hover-animation {
+    @apply transition-all ease-in-out hover:scale-110 hover:animate-none duration-300;
   }
 
   .experience-through-line {
@@ -259,7 +362,7 @@
   .row-flex {
     @apply flex flex-row;
   }
-  
+
   .text-header {
     @apply mb-12 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl;
   }
@@ -269,7 +372,7 @@
   }
 
   .text-tagline-size {
-    @apply text-sm md:text-base xl:text-lg
+    @apply text-sm md:text-base xl:text-lg;
   }
 
   .text-subtagline-size {
@@ -281,7 +384,7 @@
   }
 
   .outer-box-layout {
-    @apply m-2 p-2 md:m-16 md:p-16;
+    @apply mx-2 mb-2 p-2 md:mx-16 md:mb-16 md:p-16;
   }
 
   .outer-box-border {
@@ -307,22 +410,4 @@
   .grid-layout {
     @apply grid grid-flow-dense auto-rows-auto grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 lg:p-8;
   }
-
 }
-
-/* TEST */
-/* #landing-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
-
-/* #landing-splash {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-} */

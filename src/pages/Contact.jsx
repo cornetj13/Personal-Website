@@ -39,7 +39,7 @@ function Contact() {
           I am always looking for projects, collaborations, or just plain old
           networking opportunities!
         </p>
-        <form ref={formRef} onSubmit={sendEmail} className='w-full max-w-4xl'>
+        <form ref={formRef} onSubmit={sendEmail} className="w-full max-w-4xl">
           <div className="row-flex center-around gap-2">
             <div className="input-div">
               <label htmlFor="user_name" className="text-subtagline-size block">
@@ -89,10 +89,7 @@ function Contact() {
           />
         </form>
         <div className="w-full row-flex center-all mt-6">
-          <a
-            href="2022_Programmer_CV_EOY.pdf"
-            download="2022_Programmer_CV_EOY.pdf"
-          >
+          <a href="2023_Programmer_CV.pdf" download="2023_Programmer_CV.pdf">
             <button
               type="button"
               className="center-all contact-button-colors contact-button-border col-flex contact-button-layout font-medium text-sm"

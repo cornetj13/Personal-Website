@@ -7,13 +7,15 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-lime-900">
+    <div>
       <Landing />
       <Navbar />
-      <About />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <div className="bg-lime-900 pt-2 md:pt-8">
+        <About />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -17,11 +17,14 @@ function About() {
         </h2>
 
         <div className="flex col-flex md:row-flex">
-          <div className="flex-col center-all m-2 md:m-8 md:w-1/2 max-w-2xl" id="bio-box">
+          <div
+            className="flex-col center-all m-2 md:m-8 md:w-1/2 max-w-2xl"
+            id="bio-box"
+          >
             {/* Avatar */}
-            <div className="flex justify-center">
+            <div className="flex mx-auto w-4/5">
               <img
-                className="rounded shadow-xl md:w-4/5 profile-picture-clip"
+                className="rounded shadow-xl w-full h-full md:mx-auto profile-picture-clip"
                 src={ProfilePicture}
                 alt="Picture of Jonathan Cornet"
               />
@@ -30,8 +33,8 @@ function About() {
             {/* Bio */}
             <div className="my-2 md:my-6 p-6 text-subtagline-size">
               <p>
-                I am programmer who took quite the detour before ending up on
-                my current path. I have lived other lives as a physicist, a
+                I am programmer who took quite the detour before ending up on my
+                current path. I have lived other lives as a physicist, a
                 bartender, a tour guide, and a teacher. After I finished my
                 degree in 2017, I spent some time living in Paris. While there,
                 I rediscovered my love of programming, a skill I had picked up
@@ -495,7 +498,7 @@ function About() {
                   rel="noreferrer"
                   className="z-10"
                 >
-                  <div className="experience-circle-color experience-circle-layout experience-circle-animation">
+                  <div className="experience-circle-color experience-circle-layout experience-circle-animation experience-circle-hover-animation">
                     <GiBoots className="experience-circle-icon" />
                   </div>
                 </a>
@@ -525,7 +528,7 @@ function About() {
                   rel="noreferrer"
                   className="z-10"
                 >
-                  <div className="experience-circle-color experience-circle-layout experience-circle-animation">
+                  <div className="experience-circle-color experience-circle-layout experience-circle-animation experience-circle-hover-animation">
                     <MdSchool className="experience-circle-icon" />
                   </div>
                 </a>
@@ -555,7 +558,7 @@ function About() {
                   rel="noreferrer"
                   className="z-10"
                 >
-                  <div className="experience-circle-color experience-circle-layout experience-circle-animation">
+                  <div className="experience-circle-color experience-circle-layout experience-circle-animation experience-circle-hover-animation">
                     <MdWork className="experience-circle-icon" />
                   </div>
                 </a>
