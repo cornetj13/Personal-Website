@@ -85,7 +85,7 @@ function Contact() {
           <input
             type="submit"
             value="Send Message!"
-            className="contact-button-colors contact-button-border contact-button-layout font-medium text-sm text-center"
+            className="cursor-pointer contact-button-colors contact-button-border contact-button-layout font-medium text-sm text-center"
           />
         </form>
         <div className="w-full row-flex center-all mt-6">

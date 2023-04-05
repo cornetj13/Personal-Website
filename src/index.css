@@ -382,7 +382,8 @@
       bg-gradient-to-br 
       from-transparent 
       via-transparent 
-      opacity-0
+      opacity-100
+      md:opacity-0
       transition-all 
       duration-500
     to-black;
@@ -662,9 +663,4 @@
       lg:grid-cols-4  
       lg:p-8;
   }
-}
-
-@media (max-width: 600px) {
-  /* Mobile Device Components */
-
 }
