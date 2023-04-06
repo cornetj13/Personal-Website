@@ -128,7 +128,7 @@
   .sticky-navbar-placement {
     @apply 
       fixed 
-      top-0 
+      top-0
       left-0 
       w-full 
       z-20;
@@ -156,7 +156,6 @@
   .main-layout {
     @apply 
       pb-14 
-      pt-2 
       px-2 
       md:pt-2 
       md:pb-8;
@@ -576,7 +575,7 @@
       text-4xl 
       font-extrabold 
       tracking-tight 
-      leading-none 
+      leading-relaxed 
       md:text-5xl 
       lg:text-6xl;
   }

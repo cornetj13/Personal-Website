@@ -30,7 +30,7 @@ function About() {
             </div>
 
             {/* Bio */}
-            <div className="my-2 md:mt-6 p-6 bio-text">
+            <div className="my-2 md:mt-6 pt-4 bio-text">
               <p>
                 As a software developer, I bring a diverse background to the
                 table. Prior to pursuing a career in programming, I've explored

@@ -26,7 +26,12 @@ function Landing() {
   return (
     <section className="landing-colors landing-layout col-flex center-all">
       <Particles />
-      <motion.div initial="hidden" animate="visible" variants={animateHeading}>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={animateHeading}
+        className="mx-12"
+      >
         <h1 className="landing-header">Welcome!</h1>
         <p className="landing-tagline text-tagline-size">
           I'm <span>Jonathan Cornet</span>. Let me show you some of{' '}
